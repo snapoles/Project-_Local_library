@@ -19,6 +19,11 @@ function sortAccountsByLastName(accounts) {
 function getAccountFullNames(accounts) {
   // YOUR SOLUTION HERE
   // Hint: You can use the [`map()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) method here.
+  return accounts.map((a) => {
+    const firstName = a.name.first;
+    const lastName = a.name.last;
+    return `${firstName} ${lastName}`
+  });
 }
 
 // NOTE: YOU DON'T HAVE TO EDIT THE FUNCTIONS BELOW
