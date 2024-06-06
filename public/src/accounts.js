@@ -9,8 +9,11 @@ function findAccountById(accounts, id) {
 function sortAccountsByLastName(accounts) {
   // YOUR SOLUTION HERE
   // Hint: You can use the [`sort()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) method here. 
-
-  //return
+  return accounts.sort((a,b) => {
+    const nameA = a.name.last.toUpperCase();
+    const nameB = b.name.last.toUpperCase(); 
+    return nameA < nameB ? -1 : 1
+  });
 }
 
 function getAccountFullNames(accounts) {
